@@ -37,4 +37,8 @@ public class Album{
     public void trierParPiste(){
         Collections.sort(this.tab,new DuréeComparator());
     }
+    public void trieParTitre(){
+        Collections.sort(this.tab,new TitreComparator());
+    }
+    
 }
