@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
 public class Album{
     private String nom;
     ArrayList<chanson> tab;
@@ -30,7 +34,7 @@ public class Album{
     public double dureeTotalAlbum(){
         double duree = 0;
         for (chanson chanson : tab){
-            duree += chanson.getDuree();
+            duree += chanson.getDurée();
         }
         return duree;
     }
@@ -40,5 +44,19 @@ public class Album{
     public void trieParTitre(){
         Collections.sort(this.tab,new TitreComparator());
     }
-    
+    public static void main(String[] args) {
+        Album album = new Album("Album");
+        album.ajouterChanson(new chanson());
+        album.ajouterChanson(new chanson());
+        album.ajouterChanson(new chanson());
+        album.afficherChansons();
+        System.out.println(" ");
+        album.trierParPiste();
+        album.afficherChansons();
+        System.out.println(" ");
+
+        album.trieParTitre();
+        album.afficherChansons();
+        System.out.println(album.dureeTotalAlbum());
+    }
 }
