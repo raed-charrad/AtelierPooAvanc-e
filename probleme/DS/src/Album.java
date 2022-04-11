@@ -34,4 +34,7 @@ public class Album{
         }
         return duree;
     }
+    public void trierParPiste(){
+        Collections.sort(this.tab,new DuréeComparator());
+    }
 }
