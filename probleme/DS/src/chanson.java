@@ -1,8 +1,10 @@
-public class Chanson {
-	private String titre;
+import java.util.Scanner;
+
+public class chanson {
+    private String titre;
 	private int durée;
 		
-	public Chanson() {
+	public chanson() {
 		this.saisirChanson();
 	}
 	public String getTitre() {
@@ -52,6 +54,6 @@ public class Chanson {
 			catch (InvalidDureeException e){
 				System.out.println(e.getMessage());
 			}
-		}while(this.titre.length()<20 || this.durée>0);
+		}while(this.titre.length()>20 || this.durée<0);
 	}
 }

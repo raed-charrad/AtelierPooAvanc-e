@@ -1,4 +1,4 @@
-public class InvalidTitreException {
+public class InvalidTitreException extends Exception {
     public InvalidTitreException(String message) {
         super(message);
     }

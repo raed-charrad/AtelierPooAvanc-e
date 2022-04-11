@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class TitreComparator implements Comparator<chanson> {
 
     public int compare(chanson o1, chanson o2) {
